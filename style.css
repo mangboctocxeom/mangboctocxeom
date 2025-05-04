@@ -1,187 +1,111 @@
+/* ===== RESET & BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Alata', sans-serif;
+  background-color: white;
+  color: #2d572c;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  position: relative;
+}
 .logo {
-    position: absolute;
-    top: 25px;
-    left: 30px;
+  width: 100px;
 }
 h1 {
-    color: #28803E;
-    font-family: 'League Spartan', sans-serif;
-    font-size: 64px;
-    font-weight: 400;
-    font-style: normal;
-    position: absolute;
-    top: 76px;
-    left: 275px;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 48px;
+  font-weight: 400;
+  color: #28803E;
+  flex: 1;
+  text-align: center;
 }
+.zalo, .tiktok {
+  width: 70px;
+  margin-left: 20px;
+}
+
+/* ===== MESSAGE BOX ===== */
+.message-box {
+  background: #e1f3e0;
+  padding: 30px 40px;
+  margin: 20px auto;
+  border-radius: 20px;
+  max-width: 600px;
+  text-align: left;
+}
+.message-box h2 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ===== PRODUCTS ===== */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px; /* khoảng cách giữa các sản phẩm */
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
 .product {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%; /* đảm bảo 3 sản phẩm mỗi hàng */
+  min-width: 200px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 0;
+}
+.checkout {
+  width: 200px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .zalo, .tiktok {
+    width: 60px;
+    margin: 10px;
+  }
+  .message-box {
+    padding: 20px;
+    font-size: 16px;
   }
   .product img {
-    display: block;
-  }
-  .cart {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-  }
-  .cart img {
-    display: block;
+    width: 100px;
   }
   .checkout {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
+    width: 180px;
   }
-  .checkout img {
-    display: block;
-  }
-  .textbox {
-    position: absolute;
-    top: 307px;
-    left: 64px;
-  }
-  h2{
-    color: #000000;
-    font-family: 'Alata', sans-serif;
-    font-size: 20px;
-    font-weight: 200;
-    font-style: normal;
-    position: absolute;
-    top: 422px;
-    left: 153px;
-  }
-  .p1 {
-    position: absolute;
-    top: 296px;
-    left: 810px;
-  }
-  .p2 {
-    position: absolute;
-    top: 296px;
-    left: 1034px;
-  }
-  
-  .p3 {
-    position: absolute;
-    top: 296px;
-    left: 1251px;
-  }
-
-  .p4 {
-    position: absolute;
-    top: 522px;
-    left: 810px;
-  }
-  .p5 {
-    position: absolute;
-    top: 522px;
-    left: 1034px;
-  }
-  .p6 {
-    position: absolute;
-    top: 522px;
-    left: 1251px;
-  }  
-  .cart {
-    position: absolute;
-    top: 763px;
-    left: 886px;
-  }
-  .checkout {
-    position: absolute;
-    top: 744px;
-    left: 928px;
-  }
-
-  .tiktok {
-    position: absolute;
-    top: 45px;
-    left: 990px;
-    width: 150px;
-  }
-  .zalo {
-    position: absolute;
-    top: 45px;
-    left: 1210px;
-    width: 150px;
-  }
-
-  @media (max-width: 768px) {
-    body {
-      padding: 20px;
-    }
-  
-    .logo {
-      position: static;
-      display: block;
-      margin: 0 auto;
-      width: 120px;
-    }
-  
-    h1 {
-      position: static;
-      text-align: center;
-      font-size: 28px;
-      margin-top: 20px;
-    }
-  
-    .tiktok, .zalo {
-      position: static;
-      width: 100px;
-      margin: 10px;
-    }
-  
-    header {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-  
-    .textbox {
-      position: static;
-      width: 100%;
-      max-width: 300px;
-      margin: 0 auto;
-      display: block;
-    }
-  
-    h2 {
-      position: static;
-      font-size: 16px;
-      margin-top: 20px;
-      text-align: center;
-    }
-  
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 20px;
-    }
-  
-    .product {
-      flex: 0 0 45%;
-      text-align: center;
-    }
-  
-    .product img {
-      width: 100%;
-      max-width: 140px;
-    }
-  
-    .checkout {
-      position: static;
-      display: block;
-      margin: 40px auto;
-      width: 200px;
-    }
-  }
-  
+}
